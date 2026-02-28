@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cormorant Garamond", serif;
+  --font-display: "Cinzel", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-royal-gold: #D4AF37;
+  --color-royal-crimson: #7B1113;
+  --color-parchment: #F4E4BC;
+  --color-ink: #2C1E16;
+}
+
+body {
+  @apply font-sans text-ink antialiased bg-[#E8D5B0];
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+}
+
+.scroll-bg {
+  background: #F4E4BC;
+  background-image: url("https://www.transparenttextures.com/patterns/old-map.png");
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.2);
+  border: 2px solid #D4AF37;
+  position: relative;
+}
+
+.mughal-border {
+  border: 8px solid transparent;
+  border-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0c11.046 0 20 8.954 20 20s-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0zm0 2c-9.941 0-18 8.059-18 18s8.059 18 18 18 18-8.059 18-18S29.941 2 20 2zm0 4c7.732 0 14 6.268 14 14s-6.268 14-14 14-14-6.268-14-14 6.268-14 14-14zm0 2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z' fill='%23D4AF37' fill-opacity='0.4'/%3E%3C/svg%3E") 20 stretch;
+}
+
+.royal-heading {
+  @apply font-display font-black tracking-widest uppercase text-royal-crimson;
+  text-shadow: 1px 1px 0px rgba(212, 175, 55, 0.5);
+}
+
+.card-ancient {
+  @apply bg-parchment border-2 border-royal-gold/30 rounded-sm shadow-md transition-all duration-300;
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+}
+
+.card-ancient:hover {
+  @apply shadow-xl border-royal-gold/60 -translate-y-1;
+}
