@@ -1,0 +1,7 @@
+{
+  "name": "TaxTrace AI",
+  "description": "National Civic Infrastructure Intelligence Platform for real-time transparency and AI-powered budget monitoring across India's constituencies.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
